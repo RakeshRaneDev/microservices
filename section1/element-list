@@ -1,0 +1,7 @@
+com.eazybytes.accounts
+com.eazybytes.accounts.constants
+com.eazybytes.accounts.controller
+com.eazybytes.accounts.dto
+com.eazybytes.accounts.entity
+com.eazybytes.accounts.repository
+com.eazybytes.accounts.service
