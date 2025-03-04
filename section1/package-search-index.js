@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.eazybytes.accounts"},{"l":"com.eazybytes.accounts.constants"},{"l":"com.eazybytes.accounts.controller"},{"l":"com.eazybytes.accounts.dto"},{"l":"com.eazybytes.accounts.entity"},{"l":"com.eazybytes.accounts.repository"},{"l":"com.eazybytes.accounts.service"}];updateSearchResults();
