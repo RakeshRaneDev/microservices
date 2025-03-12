@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: "configserver"
+  profiles:
+#    active: native
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: "https://github.com/RakeshRaneDev/banking-system-config.git"
+          default-label: release
+          time-out: 5
+          clone-on-start: true
+          force-pull: true
+#        native:
+#          search-locations: "classpath:/config"config
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+encrypt:
+  key: "GS5IO5DG745NJH4XCV567637BNJ4"
+server:
+  port: 8071
+
+

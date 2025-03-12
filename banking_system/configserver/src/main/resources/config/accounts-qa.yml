@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to myBank QA Apis"
+  contactDetails:
+    name: "sneha-QaLead"
+    email: "sneha@gmail.com"
+  onCallSupport:
+    - (555) 456-1234
+    - (123) 891-980

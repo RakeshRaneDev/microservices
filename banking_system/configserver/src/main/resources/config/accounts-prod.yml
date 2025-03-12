@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to myBank production"
+  contactDetails:
+    name: "mr. Artist"
+    email: "artist@gmail.com"
+  onCallSupport:
+    - (555) 098-1234
+    - (123) 456-980

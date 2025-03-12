@@ -1,0 +1,16 @@
+
+spring:
+  config:
+    activate:
+      on-profile: "qa"
+build:
+  version: "2.0"
+
+cards:
+  message: "Welcome to myBank Cards QA Apis"
+  contactDetails:
+    name: "cards-QaLead"
+    email: "cards@gmail.com"
+  onCallSupport:
+    - (555) 456-1234
+    - (123) 891-980
