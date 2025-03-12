@@ -1,0 +1,12 @@
+
+build:
+  version: "2.0"
+
+loans:
+  message: "Welcome to myBank QA loans Apis"
+  contactDetails:
+    name: "loans-QaLead"
+    email: "loans@gmail.com"
+  onCallSupport:
+    - (555) 456-1234
+    - (123) 891-980

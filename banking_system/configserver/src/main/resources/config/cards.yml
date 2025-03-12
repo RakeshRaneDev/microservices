@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+cards:
+  message: "Welcome to myBank cards local"
+  contactDetails:
+    name: "Rakesh Rane"
+    email: "rakesh@gmail.com"
+  onCallSupport:
+      - (555) 551-1234
+      - (123) 678-980

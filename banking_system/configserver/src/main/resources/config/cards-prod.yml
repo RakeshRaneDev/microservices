@@ -1,0 +1,16 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+cards:
+  message: "Welcome to myBank cards production"
+  contactDetails:
+    name: "mr. Artist cards"
+    email: "cards@gmail.com"
+  onCallSupport:
+    - (234) 098-6765
+    - (234) 787-980

@@ -1,0 +1,12 @@
+
+build:
+  version: "3.0"
+
+loans:
+  message: "Welcome to myBank loan local"
+  contactDetails:
+    name: "Rakesh Rane"
+    email: "rakesh@gmail.com"
+  onCallSupport:
+    - (555) 551-1234
+    - (123) 678-980
