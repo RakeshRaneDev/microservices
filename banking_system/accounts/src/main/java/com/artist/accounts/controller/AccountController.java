@@ -24,7 +24,8 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/api", produces = {MediaType.APPLICATION_JSON_VALUE})
 @Validated
 @Tag(
-        name = "CRUD REST Api for Accounts",
+        name = "CRUD REST Api for Artist " +
+                "Accounts",
         description = "CRUD REST api related to accounts"
 )
 public class AccountController {
