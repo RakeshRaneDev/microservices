@@ -25,10 +25,18 @@ management:
   endpoint:
     shutdown:
       enabled: true
-
+    health:
+      probes:
+        enabled: true
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
   info:
     env:
       enabled: true
+
 endpoints:
   shutdown:
     enabled: true
@@ -46,3 +54,8 @@ info:
     name: "loans"
     description: "Artist Bank loans application"
     version: "1.0.0"
+logging:
+  level:
+    com:
+      artist:
+        loans: DEBUG

@@ -27,3 +27,8 @@ info:
     name: "gatewayserver"
     description: "Artist Bank gatewayserver application"
     version: "1.0.0"
+logging:
+  level:
+    com:
+      artist:
+        gatewayserver: DEBUG
