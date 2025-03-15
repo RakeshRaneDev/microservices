@@ -20,7 +20,6 @@ services:
      extends:
        file: common-config.yml
        service: microservice-db-config
-
   loansdb:
      container_name: loansdb
      ports:
@@ -47,6 +46,26 @@ services:
       file: common-config.yml
       service: microservice-base-config
 
+  eurekaserver:
+    image: "artist0320/eurekaserver:s7"
+    container_name: eurekaserver-ms
+    ports:
+      - "8070:8070"
+    healthcheck:
+      test: "curl --fail --silent localhost:8070/actuator/health/readiness | grep UP || exit 1"
+      interval: 10s
+      timeout: 5s
+      start_period: 10s
+      retries: 10
+    extends:
+      file: common-config.yml
+      service: microservice-eureka-config
+    depends_on:
+      configserver:
+        condition: service_healthy
+    environment:
+      SPRING_APPLICATION_NAME: "eurekaserver"
+
   accounts:
     image: "artist0320/accounts:s7"
     container_name: accounts-ms
@@ -58,10 +77,14 @@ services:
     depends_on:
       accountsdb:
         condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+          condition: service_healthy
 
     extends:
       file: common-config.yml
-      service:  microservice-configserver-config
+      service:  microservice-db-config
 
   loans:
     image: "artist0320/loans:s7"
@@ -74,9 +97,13 @@ services:
     depends_on:
       loansdb:
         condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+          condition: service_healthy
     extends:
       file: common-config.yml
-      service: microservice-configserver-config
+      service: microservice-db-config
 
   cards:
     image: "artist0320/cards:s7"
@@ -89,9 +116,13 @@ services:
     depends_on:
       cardsdb:
         condition: service_healthy
+      configserver:
+        condition: service_healthy
+      eurekaserver:
+          condition: service_healthy
     extends:
       file: common-config.yml
-      service: microservice-configserver-config
+      service: microservice-db-config
 
 networks:
   artist:
