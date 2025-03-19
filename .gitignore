@@ -1,4 +1,11 @@
 # Compiled class file
+*/banking_system/cards/target
+*/banking_system/cards/target
+*/banking_system/loans/target
+*/banking_system/eurekaserver/target
+*/banking_system/gatewayserver/target
+*/banking_system/configserver/target
+*/banking_system/docker-compose/default/.data
 *.class
 *.idea
 
