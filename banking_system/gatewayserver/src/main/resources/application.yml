@@ -12,7 +12,7 @@ spring:
           lowerCaseServiceId: true
       httpclient:
         connect-timeout: 1000
-        response-timeout:  2s
+        response-timeout:  10s
   data:
     redis:
       connect-timeout:
@@ -32,6 +32,10 @@ management:
   info:
     env:
       enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
 info:
   app:
     name: "gatewayserver"
@@ -41,7 +45,9 @@ logging:
   level:
     com:
       artist:
-        gatewayserver: DEBUG
+        accounts: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
 
 resilience4j.circuitbreaker:
   configs:

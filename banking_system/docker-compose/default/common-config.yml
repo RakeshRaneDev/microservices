@@ -10,6 +10,12 @@ services:
       resources:
         limits:
           memory: 700m
+    environment:
+      JAVA_TOOL_OPTIONS: "-javaagent:/app/libs/opentelemetry-javaagent-2.11.0.jar"
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://tempo:4318
+      OTEL_METRICS_EXPORTER: none
+      OTEL_LOGS_EXPORTER: none
+
 
   microservice-configserver-config:
     extends:
@@ -29,17 +35,5 @@ services:
     environment:
       EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
 
-  microservice-db-config:
-    extends:
-      service: microservice-eureka-config
-    image: mysql
-    healthcheck:
-      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
-      timeout: 10s
-      retries: 10
-      interval: 10s
-      start_period: 10s
-    environment:
-      MYSQL_ROOT_PASSWORD: root
 
 

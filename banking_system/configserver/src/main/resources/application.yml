@@ -26,6 +26,9 @@ management:
       enabled: true
     liveness-state:
       enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
   endpoint:
     health:
       probes:
@@ -34,5 +37,12 @@ encrypt:
   key: "GS5IO5DG745NJH4XCV567637BNJ4"
 server:
   port: 8071
+logging:
+  level:
+    com:
+      artist:
+        accounts: DEBUG
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
 
 
