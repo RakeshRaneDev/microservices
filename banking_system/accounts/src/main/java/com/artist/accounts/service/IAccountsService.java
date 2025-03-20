@@ -27,4 +27,6 @@ public interface IAccountsService {
      * @return boolean a corrounding record delete or not
      */
     boolean deleteAccount(String mobileNumber);
+
+    boolean updateCommunicationStatus(Long accountNumber);
 }

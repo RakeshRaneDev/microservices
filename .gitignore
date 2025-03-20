@@ -5,12 +5,13 @@
 */banking_system/eurekaserver/target
 */banking_system/gatewayserver/target
 */banking_system/configserver/target
-*/banking_system/docker-compose/default/.data
+*.data
 /target/
 */target/**
 **/META-INF/
 !.mvn/wrapper/maven-wrapper.jar
 *.class
+*/.data/**
 *.idea
 
 # Log file
